@@ -1,0 +1,25 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Picture1</th>
+        <th scope="col">Picture2</th>
+        <th scope="col">About</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <%  data.forEach(element => { %> 
+        <tr>
+          <form action="/admin/essen" method="post">
+          <th scope="row"><button type="submit" class="btn btn-primary">Edit</button> </th>
+          <td><textarea name="picture" id="" cols="30" rows="1"><%= element.picture %></textarea> </td>
+          <td><textarea name="apicture" id="" cols="30" rows="1"><%= element.apicture %></textarea></td>
+          <td><textarea name="about" id="" cols="30" rows="1"><%= element.about %></textarea></td>
+          <td class="invisible"><input type="text" name="id" id="" value=<%= element._id %>></td>
+        </form>
+        </tr>
+      <% }); %> 
+    </tbody>
+  </table>

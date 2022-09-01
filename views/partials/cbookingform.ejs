@@ -1,0 +1,52 @@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Booking Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/form" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" id="name" required placeholder="Name">
+                  </div>
+                <div class="mb-3">
+                    <label for="number" class="form-label">Number</label>
+                    <input type="tel" name="number" class="form-control" id="number" required placeholder="Mobile number">
+                  </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
+                  </div>
+                  <select class="form-select mb-3" name="type" aria-label="Default select example">
+                    <option value="not mention" selected>Please Select the service</option>
+                    <option >HVAC/VRV(Daikin)/VRF/DUCTABLE AC/COOLING TOWER</option>
+                    <option >DEEP FREEZE</option>
+                    <option >AIR CONDITIONER</option>
+                    <option >REFRIGERATOR</option>
+                    <option >WASHING MACHINE</option>
+                    <option >MICROWAVE OVEN</option>
+                    <option >KITCHEN CHIMNEY</option>
+                    <option >GEYSER</option>
+                    <option >RO WATER PURIFIER</option>
+                  </select>
+                  <div class="mb-3">
+                    <label for="peblem" class="form-label">Describe your problem</label>
+                    <textarea class="form-control" name="problem" id="problem" required rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="add" class="form-label">Please Enter Address</label>
+                    <textarea class="form-control" name="add" id="add" required rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

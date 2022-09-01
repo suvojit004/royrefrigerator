@@ -1,0 +1,57 @@
+<table class="table table-hover">   
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Docket</th>
+        <th scope="col">Name</th>
+        <th scope="col">Number</th>
+        <th scope="col">Address</th>
+        <th scope="col">Email</th>
+        <th scope="col">Type</th>
+        <th scope="col">Problem</th>
+        <th scope="col">.......Status......</th>
+        <th scope="col"></th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <%  data.forEach(element => { %>
+       
+        <tr>
+          <form action="/admin/pen" method="post">
+            <% if (element.status==='pen') { %> 
+          <th scope="row"><button type="submit" class="btn btn-primary">Edit</button>
+            </th>
+          <td><%= element.d_no %> </td>
+          <td><%= element.name %> </td>
+          <td><%= element.number %></td>
+          <td><%= element.add %></td>
+          <td><%= element.email %></td>
+          <td><%= element.type %></td>
+          <td><%= element.problem %></td>
+          <td colspan="2"><select class="form-select mb-3" name="status" aria-label="Default select example">
+            <% if(element.status==='new') { %>
+              <option selected value=<%=element.status%>>New</option>
+              <option value="pen">Pending</option>
+              <option value="suc">Success</option>
+            <% } else if(element.status==='pen'){%>
+              <option selected value=<%=element.status%>>Pending</option>
+              <option value="suc">Success</option>
+              <option value="new">New</option>  
+            <% }else {%>
+              <option selected value=<%=element.status%>>Success</option>
+              <option value="pen">Pending</option>
+              <option value="new">New</option>
+              <% } %> 
+          </select></td>
+          
+          
+          <td><%= element.date.toString().substring(0,15) %></td>
+          <td class="invisible"><input type="text" name="id" value=<%= element._id %>></td>
+          <% }%>
+        </form>
+        </tr>
+      <% }); %> 
+    </tbody>
+  </table>

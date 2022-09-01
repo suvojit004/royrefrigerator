@@ -1,0 +1,33 @@
+#docket{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+.service{
+    background-color: antiquewhite;
+    padding-top: 15px;
+}
+.background{
+    background-image: url(https://res.cloudinary.com/dq89xxh5c/image/upload/v1661102727/royrefrigerator/paperwork-5000691_640_sys98n.png);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.testimonial{
+    background: rgb(34,195,70);
+background: linear-gradient(153deg, rgba(34,195,70,1) 31%, rgba(221,206,175,1) 54%);
+}
+.about{
+    background-color: antiquewhite;
+    height: 50vh;
+}
+.contact{
+    background-image: url(https://res.cloudinary.com/dq89xxh5c/image/upload/v1660819002/royrefrigerator/contact_cuvoss.jpg);
+}
+.address{
+    background-color: rgba(255, 247, 0,0.8);
+}
+.material-symbols-outlined{
+    color: red;
+}
+
+
